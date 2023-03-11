@@ -12,13 +12,21 @@
         <div class="col-md-4 col-md-offset-4">
             <h2 class="text-center"><b>Ayo Login!</b><br>Demo Login</h3>
             <hr>
-            @if(session('error'))
-            <div class="alert alert-danger">
-                <b>Opps!</b> {{session('error')}}
+            @if(session('message'))
+            <div class="alert alert-success">
+                <b>Hore!</b> {{session('message')}}
             </div>
             @endif
-            <form action="{{ route('actionLogin') }}" method="post">
+            <form action="{{ route('actionRegister') }}" method="post">
             @csrf
+            <div class="form-group">
+                <label for="name">Nama Lengkap</label>
+                <input type="text" name="name" class="form-control" placeholder="Nama lengkap" required="">
+            </div>
+            <div class="form-group">
+                <label for="role">Role</label>
+                <input type="text" name="role" class="form-control" placeholder="Role">
+            </div>
                 <div class="form-group">
                     <label>Email</label>
                     <input type="email" name="email" class="form-control" placeholder="Email" required="">
@@ -27,9 +35,9 @@
                     <label>Password</label>
                     <input type="password" name="password" class="form-control" placeholder="Password" required="">
                 </div>
-                <button type="submit" class="btn btn-primary btn-block">Log In</button>
+                <button type="submit" class="btn btn-primary btn-block">Register</button>
                 <hr>
-                <p class="text-center">Belum punya akun? <a href="{{ route('register') }}">Register</a> sekarang!</p>
+                <p class="text-center">Sudah punya akun? <a href="{{ route('login') }}">Login</a> sekarang!</p>
             </form>
         </div>
     </div>

@@ -32,7 +32,7 @@
                   <ul class="dropdown-menu">
                     <li><a>Level: {{Auth::user()->role}}</a></li>
                     <li role="separator" class="divider"></li>
-                    <li><a href="{{route('actionlogout')}}"><i class="fa fa-power-off"></i> Log Out</a></li>
+                    <li><a href="{{route('actionLogout')}}"><i class="fa fa-power-off"></i> Log Out</a></li>
                   </ul>
                 </li>
               </ul>
