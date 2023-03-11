@@ -10,7 +10,7 @@
 <body>
     <div class="container"><br>
         <div class="col-md-4 col-md-offset-4">
-            <h2 class="text-center"><b>Ayo Login!</b><br>Demo Login</h3>
+            <h2 class="text-center"><b>Ayo Register!</b><br>Demo Register</h3>
             <hr>
             @if(session('message'))
             <div class="alert alert-success">
